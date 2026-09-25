@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> UrbanStyle - Tienda Exclusiva</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Encabezado y Navegación -->
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand-title">UrbanStyle</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                <li id="navLoginItem"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                <li id="navRegisterItem"><a href="registro.html" class="btn-cta">Registrarse</a></li>
+                <li>
+                    <button class="btn btn-outline-dark position-relative ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito">
+                        🛒 Carrito
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge">
+                            0
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <!-- Banner Principal / Historia -->
+        <section class="hero-card">
+            <article>
+                <h2 class="section-heading">Nueva Colección Oversize</h2>
+                <p>Moda urbana de alta calidad en algodón full brillo. Estilo único para destacar.</p>
+                <img src="imagen/images.jpg" alt="tendenci_777 Banner" class="hero-img">
+            </article>
+        </section>
+
+        <!-- Catálogo de Productos con enlace directo -->
+        <section id="catalogo">
+            <h2 class="section-heading">Catálogo de Productos Destacados</h2>
+            <div class="catalog-grid">
+
+                <article class="product-card">
+                    <img src="imagen/images.pgn.jpg" alt="Poleron Emotion" onclick="verDetalle('1')" style="cursor:pointer">
+                    <span class="product-category">Polerones</span>
+                    <h3 onclick="verDetalle('1')" style="cursor:pointer">Poleron Emotion</h3>
+                    <p class="product-desc">Polerón de alta calidad de algodón full brillo, disponible en todas sus tallas con estilo oversize.</p>
+                    <span class="product-price">$29.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('1')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/images2.pgn.jpg" alt="Poleron Valley Dream" onclick="verDetalle('2')" style="cursor:pointer">
+                    <span class="product-category">Polerones</span>
+                    <h3 onclick="verDetalle('2')" style="cursor:pointer">Poleron Valley Dream</h3>
+                    <p class="product-desc">Polerón de alta calidad de algodón full brillo, disponible en todas sus tallas con estilo oversize.</p>
+                    <span class="product-price">$32.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('2')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/imagen3.pgn.jpg" alt="Poleron Valley Dream V2" onclick="verDetalle('3')" style="cursor:pointer">
+                    <span class="product-category">Polerones</span>
+                    <h3 onclick="verDetalle('3')" style="cursor:pointer">Poleron Valley Dream </h3>
+                    <p class="product-desc">Edición especial en color único con acabados de primera calidad.</p>
+                    <span class="product-price">$34.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('3')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/imagen4.pgn.webp" alt="Poleron Urban Style" onclick="verDetalle('4')" style="cursor:pointer">
+                    <span class="product-category">Polerones</span>
+                    <h3 onclick="verDetalle('4')" style="cursor:pointer">Poleron Valley Dream</h3>
+                    <p class="product-desc">Polerón de alta calidad de algodón full brillo, disponible en todas sus tallas con estilo oversize.</p>
+                    <span class="product-price">$29.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('4')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/imagengorra5.pgn.jpg" alt="Gorra Supreme" onclick="verDetalle('5')" style="cursor:pointer">
+                    <span class="product-category">Accesorios</span>
+                    <h3 onclick="verDetalle('5')" style="cursor:pointer">Gorra Supreme</h3>
+                    <p class="product-desc">Gorra marca Supreme alta calidad, disponible en todas sus tallas.</p>
+                    <span class="product-price">$19.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('5')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/0b4da0e9-3326-441a-adc8-cdcd387e2940.avif" alt="Short Valley Dream" onclick="verDetalle('6')" style="cursor:pointer">
+                    <span class="product-category">Accesorios</span>
+                    <h3 onclick="verDetalle('6')" style="cursor:pointer">Short Valley Dream</h3>
+                    <p class="product-desc">Short marca Valley Dream alta calidad, disponible en todas sus tallas.</p>
+                    <span class="product-price">$19.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('6')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/69471991-eff1-417a-af2d-f2a29a5ed7e5.avif" alt="Gorra Corteiz" onclick="verDetalle('7')" style="cursor:pointer">
+                    <span class="product-category">Accesorios</span>
+                    <h3 onclick="verDetalle('7')" style="cursor:pointer">Gorra Corteiz</h3>
+                    <p class="product-desc">Gorra marca Corteiz alta calidad, disponible en todas sus tallas.</p>
+                    <span class="product-price">$19.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('7')">Agregar</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="imagen/01e588951dcb44dbbd85d47ff8295cf3-goods.avif" alt="Polera Valley Dream" onclick="verDetalle('8')" style="cursor:pointer">
+                    <span class="product-category">Polerones</span>
+                    <h3 onclick="verDetalle('8')" style="cursor:pointer">Polera Valley Dream</h3>
+                    <p class="product-desc">Polera de alta calidad de algodón full brillo, disponible en todas sus tallas con estilo oversize.</p>
+                    <span class="product-price">$29.990 CLP</span>
+                    <button class="btn-primary" onclick="agregarAlCarritoDesdeInicio('8')">Agregar</button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 tienda de ropa exclusiva UrbanStyle - Todos los derechos reservados.</p>
+        <p>Escuela de Informática y Telecomunicaciones Duoc UC.</p>
+    </footer>
+
+    <!-- Ventana desplegable del Carrito (Bootstrap Offcanvas) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">Tu Carrito de Compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="listaCarritoBootstrap"></div>
+      </div>
+      <div class="offcanvas-footer p-3 border-top bg-light">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold fs-5">Total:</span>
+          <span class="fw-bold fs-5 text-success" id="totalCarritoBootstrap">$0 CLP</span>
+        </div>
+        <button class="btn btn-success w-100" id="btnPagarModal" onclick="procesarPagoRapido()">Finalizar Compra</button>
+      </div>
+    </div>
+
+    <!-- 1. JavaScript de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 2. Tu nuevo script del Carrito -->
+    <script src="carrito.js"></script>
+
+    <!-- 3. Tu script actual de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>
