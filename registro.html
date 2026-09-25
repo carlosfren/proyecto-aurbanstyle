@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanStyle - Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand-title">UrbanStyle</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li id="navLoginItem"><a href="login.html" class="btn-cta">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="form-card">
+            <h2 class="section-heading">Crear Cuenta</h2>
+            <div class="info-note">
+                <strong>Beneficios de aniversario:</strong><br>
+                • Personas que ingresan por primera vez tienen 15% de descuento automático.<br>
+                • Código <code>Hoodis07</code> otorga 10% de descuento vitalicio.<br>
+                • Alumnos Duoc (@duoc.cl / @duocuc.cl) obtienen un 30% de descuento.
+            </div>
+
+            <form id="registroForm" novalidate>
+                <div class="form-field">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Marcela González">
+                    <span class="error-text" id="errorNombre"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@correo.cl">
+                    <span class="error-text" id="errorCorreo"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="rut">RUT</label>
+                    <input type="text" id="rut" name="rut" placeholder="Ej: 12345678-9" maxlength="12">
+                    <span class="error-text" id="errorRut"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                    <span class="error-text" id="errorFecha"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres">
+                    <span class="error-text" id="errorPassword"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <span class="error-text" id="errorConfirmPassword"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="codigoPromo">Código Promocional (Opcional)</label>
+                    <input type="text" id="codigoPromo" name="codigoPromo" placeholder="Ej: Hoodis07">
+                    <span class="error-text" id="errorPromo"></span>
+                </div>
+
+                <button type="submit" class="btn-primary">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 tienda de ropa exclusiva UrbanStyle - Escuela de Informática y Telecomunicaciones Duoc UC.</p>
+    </footer>
+
+    <!-- 1. JavaScript de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 2. Tu nuevo script del Carrito -->
+    <script src="carrito.js"></script>
+
+    <!-- 3. Tu script actual de la aplicación -->
+    <script src="app.js"></script>
+
+</body>
+</html>

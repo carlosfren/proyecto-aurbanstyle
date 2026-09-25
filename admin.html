@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanStyle - Panel de Administrador</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado y Navegación (misma estructura que el resto del sitio) -->
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="brand-title">UrbanStyle</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#catalogo" class="nav-link">Catálogo</a></li>
+                <li id="navLoginItem"><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                <li id="navRegisterItem"><a href="registro.html" class="btn-cta">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section id="adminContenido">
+            <div class="admin-header">
+                <div>
+                    <h2 class="section-heading" style="margin-bottom:4px;">Panel de Administrador</h2>
+                    <span class="admin-badge">Acceso restringido</span>
+                </div>
+                <p id="adminSaludo" class="text-muted mb-0"></p>
+            </div>
+
+            <div class="admin-layout">
+
+                <!-- Columna izquierda: listado de productos -->
+                <article class="admin-panel">
+                    <h3 class="section-heading-left mb-3">Productos publicados</h3>
+                    <div class="admin-table-wrapper">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Img</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaProductosAdmin">
+                                <!-- Filas generadas por admin.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <p id="mensajeTablaVacia" class="admin-empty" style="display:none;">
+                        Aún no hay productos. Agrega el primero con el formulario de la derecha.
+                    </p>
+                </article>
+
+                <!-- Columna derecha: formulario de alta / edición -->
+                <article class="admin-panel">
+                    <h3 class="section-heading-left mb-3" id="tituloFormularioProducto">Agregar producto</h3>
+
+                    <form id="formularioProducto" novalidate>
+                        <input type="hidden" id="productoId">
+
+                        <div class="form-field">
+                            <label for="productoNombre">Nombre del producto</label>
+                            <input type="text" id="productoNombre" placeholder="Ej: Polerón Oversize Negro">
+                            <span class="error-text" id="errorProductoNombre"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productoCategoria">Categoría</label>
+                            <select id="productoCategoria">
+                                <option value="Polerones">Polerones</option>
+                                <option value="Accesorios">Accesorios</option>
+                                <option value="Poleras">Poleras</option>
+                                <option value="Pantalones">Pantalones</option>
+                            </select>
+                            <span class="error-text" id="errorProductoCategoria"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productoPrecio">Precio (CLP)</label>
+                            <input type="number" id="productoPrecio" min="1" step="1" placeholder="Ej: 29990">
+                            <span class="error-text" id="errorProductoPrecio"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productoCalidad">Calidad / detalle corto</label>
+                            <input type="text" id="productoCalidad" placeholder="Ej: 100% Algodón Premium">
+                            <span class="error-text" id="errorProductoCalidad"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productoDescripcion">Descripción</label>
+                            <input type="text" id="productoDescripcion" placeholder="Descripción para la ficha del producto">
+                            <span class="error-text" id="errorProductoDescripcion"></span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="productoImagen">Ruta o URL de la imagen</label>
+                            <input type="text" id="productoImagen" placeholder="Ej: imagen/nuevo-producto.jpg" autocomplete="off">
+                            <span class="error-text" id="errorProductoImagen"></span>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="btnGuardarProducto">Guardar producto</button>
+                        <button type="button" class="btn-secondary-admin" id="btnCancelarEdicion" style="display:none;">Cancelar edición</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 tienda de ropa exclusiva UrbanStyle - Todos los derechos reservados.</p>
+        <p>Escuela de Informática y Telecomunicaciones Duoc UC.</p>
+    </footer>
+
+    <!-- 1. JavaScript de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 2. Script del carrito (se carga igual que en el resto del sitio) -->
+    <script src="carrito.js"></script>
+
+    <!-- 3. Script general de la app (sesión, catálogo compartido) -->
+    <script src="app.js"></script>
+
+    <!-- 4. Script propio del panel de administrador -->
+    <script src="admin.js"></script>
+</body>
+</html>
