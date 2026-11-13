@@ -1,0 +1,13 @@
+import { Link } from "react-router-dom";
+
+function NoEncontrado() {
+  return (
+    <div className="text-center my-5">
+      <h1 className="display-4">404</h1>
+      <p className="lead">La página que buscas no existe.</p>
+      <Link to="/" className="btn btn-primary">Volver al inicio</Link>
+    </div>
+  );
+}
+
+export default NoEncontrado;

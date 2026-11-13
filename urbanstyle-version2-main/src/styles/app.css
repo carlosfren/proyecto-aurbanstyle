@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Estilos propios de UrbanStyle + Bootstrap */
+:root {
+  --us-negro: #101010;
+  --us-rojo: #ff2c3a;
+  --us-gris-fondo: #7e7e7e;
+  --us-borde: #eaeaea;
+}
+
+body {
+  background-color: var(--us-gris-fondo);
+  color: var(--us-negro);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--us-rojo) !important;
+  border-color: var(--us-rojo) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #e02431 !important;
+  border-color: #e02431 !important;
+}
+
+.btn-dark {
+  background-color: var(--us-negro) !important;
+  border-color: var(--us-negro) !important;
+  font-weight: 600;
+}
+
+/* Tarjetas Globales */
+.card {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Cuidado de imágenes */
+.producto-img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.carrito-miniatura {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Form de inputs */
+.form-control,
+.form-select {
+  border-radius: 8px !important;
+  padding: 0.65rem 0.9rem !important;
+  border: 1px solid #ddd !important;
+}
+
+.form-control:focus {
+  border-color: var(--us-rojo) !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 44, 58, 0.2) !important;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--us-negro) 0%, #2b2b2b 100%);
+  border-bottom: 4px solid var(--us-rojo);
+  color: #ffffff;
+  border-radius: 16px;
+}
+
+.brand-logo {
+  font-size: 1.45rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  display: inline-block;
+}
+
+.brand-logo:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Detalle rojo corporativo */
+.brand-accent {
+  color: var(--us-rojo) !important;
+  font-weight: 900 !important;
+}
+
+/* Animación flotante para el botón de retorno */
+.btn-volver {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-volver:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-volver span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.btn-volver:hover span {
+  transform: translateX(-3px);
+}
+
+.garantia-activa {
+  box-shadow:
+    0 0 0 2px var(--us-rojo),
+    0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Tarjeta visual dinámica 3D en Hero */
+.hero-showcase-card {
+  width: 190px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 44, 58, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: default;
+  user-select: none;
+}
+
+.hero-showcase-card:hover {
+  border-color: var(--us-rojo);
+  box-shadow:
+    0 18px 36px rgba(255, 44, 58, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.hero-showcase-card img {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  pointer-events: none;
+}
+
+.navbar {
+  border-bottom: 3px solid var(--us-rojo);
+}
+
+/* ================= ENCABEZADO (mismo diseño y colores del proyecto principal) ================= */
+.site-header {
+  background-color: var(--us-negro) !important;
+  border-bottom: 4px solid var(--us-rojo);
+  padding: 16px 0;
+}
+
+/* El logo del encabezado usa Anton; el del pie de página conserva su estilo. */
+.site-header .brand-logo {
+  font-family: "Anton", sans-serif;
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  transform: none;
+  transition: opacity 0.2s ease;
+}
+
+.site-header .brand-logo::first-letter {
+  color: var(--us-rojo);
+}
+
+.site-header .brand-logo:hover {
+  opacity: 0.9;
+  transform: none;
+}
+
+.site-header .nav-menu {
+  gap: 22px;
+}
+
+.site-header .nav-link {
+  position: relative;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.site-header .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--us-rojo);
+  transition: width 0.25s ease;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus {
+  color: var(--us-rojo);
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+  width: 100%;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--us-rojo);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--us-rojo);
+  transition: all 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: transparent;
+  color: var(--us-rojo);
+  border-color: var(--us-rojo);
+}
+
+.btn-carrito {
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 30px !important;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn-carrito:hover {
+  background: #ffffff !important;
+  color: var(--us-negro) !important;
+}
+
+.cart-count-badge {
+  background-color: var(--us-rojo) !important;
+  color: #ffffff;
+}
